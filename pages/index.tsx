@@ -16,11 +16,7 @@ const navigation = [
 const Home: NextPage = () => {
   return (
     <div className="relative overflow-hidden bg-white">
-      <a
-        href="/models/ar.usdz"
-        className="w-3 h-3 text-black bg-white"
-        rel="ar"
-      >
+      <a href="/models/ar.usdz" className="w-3 h-3 text-black bg-white">
         Show me AR Stuff!
       </a>
     </div>
