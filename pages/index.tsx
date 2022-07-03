@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.css";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import dynamic from "next/dynamic";
 
 const navigation = [
   { name: "Product", href: "#" },
@@ -12,6 +13,8 @@ const navigation = [
   { name: "Marketplace", href: "#" },
   { name: "Company", href: "#" },
 ];
+
+const Model = dynamic(() => import("../components/Model"), { ssr: false });
 
 const Home: NextPage = () => {
   return (
@@ -23,6 +26,8 @@ const Home: NextPage = () => {
       >
         Show me AR Stuff!
       </a>
+
+      <Model />
     </div>
   );
 };
